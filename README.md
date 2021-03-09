@@ -3,7 +3,7 @@
 This integration uses the JavaScript SDK to accept P24 payments
 
 
-See a [hosted version](https://demo-p24-js-sdk.herokuapp.com) of the sample
+See a [hosted version](https://p24-paypal-js-sdk.herokuapp.com) of the sample
 
 
 ### How to run locally

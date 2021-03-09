@@ -1,15 +1,8 @@
 const { NODE_ENV, CLIENT_ID, CLIENT_SECRET } = process.env;
 
-const isProd = NODE_ENV === "production";
-
-const PAYPAL_API_BASE = isProd
-  ? "https://api.paypal.com"
-  : "https://api.sandbox.paypal.com";
-
-
 module.exports = {
-  isProd,
-  PAYPAL_API_BASE,
-  CLIENT_ID,
-  CLIENT_SECRET,
+  WEBHOOK_ID: process.env.WEBHOOK_ID,
+  PORT: process.env.PORT || 8080,
+  PAYPAL_API_BASE: process.env.PAYPAL_API_BASE || "https://api.sandbox.paypal.com",
+  NODE_ENV, CLIENT_ID, CLIENT_SECRET 
 };

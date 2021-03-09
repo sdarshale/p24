@@ -26,7 +26,8 @@ paypal
   .Buttons({
     fundingSource: paypal.FUNDING.PAYPAL,
     style: {
-      label: 'pay',
+      label: "pay",
+      color: "silver",
     },
     createOrder(data, actions) {
       return actions.order.create(order)
@@ -86,6 +87,7 @@ paypal
 paypal
   .Buttons({
     fundingSource: paypal.FUNDING.P24,
+    upgradeLSAT: true,
     style: {
       label: 'pay',
     },
@@ -93,7 +95,22 @@ paypal
       return actions.order.create(order)
     },
     onApprove(data, actions) {
-      // capture is called after recieving a webhook event on the server
+      fetch(`/capture/${data.orderID}`, {
+        method: "post",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          swal("Order Captured!", `Id: ${data.id}, ${Object.keys(data.payment_source)[0]}, ${data.purchase_units[0].payments.captures[0].amount.currency_code} ${data.purchase_units[0].payments.captures[0].amount.value}`, "success");
+        })
+        .catch(console.error);
+    },
+    onCancel(data, actions) {
+      console.log(data)
+      swal("Order Canceled", `ID: ${data.orderID}`, "warning");
+    },
+    onError(err) {
+      console.error(err);
     },
   })
   .render('#p24-btn')
