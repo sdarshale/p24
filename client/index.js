@@ -83,7 +83,7 @@ paypal
   })
   .render("#p24-container");
 
-const p24Buton = paypal.Buttons({
+const p24Button = paypal.Buttons({
   fundingSource: paypal.FUNDING.P24,
   upgradeLSAT: true,
   style: {
@@ -118,8 +118,8 @@ const p24Buton = paypal.Buttons({
   },
 });
 
-if (p24Buton.isEligible()) {
-  p24Buton.render("#p24-btn");
+if (p24Button.isEligible()) {
+  p24Button.render("#p24-btn");
 } else {
   document.getElementById("p24-radio").style.display = "none";
 }
