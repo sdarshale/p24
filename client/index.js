@@ -1,6 +1,6 @@
-/* eslint-disable consistent-return, new-cap, no-alert, no-console */
+/* eslint-disable  no-alert, no-unused-vars */
 
-const order = {
+var order = {
   purchase_units: [
     {
       amount: {
@@ -83,7 +83,7 @@ paypal
   })
   .render("#p24-container");
 
-const p24Button = paypal.Buttons({
+var p24Button = paypal.Buttons({
   fundingSource: paypal.FUNDING.P24,
   upgradeLSAT: true,
   style: {

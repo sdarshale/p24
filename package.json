@@ -15,6 +15,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "eslint": "^7.22.0",
     "htmlhint": "^0.14.2",
     "htmlhintrc": "^1.0.1",
     "ngrok": "^3.4.0",

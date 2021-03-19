@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Lint
 on: [push, pull_request]
 jobs:
   build:
@@ -12,7 +12,6 @@ jobs:
     - name: Install JS Dependencies
       run: npm install
     - name: Lint html
-      run: ./node_modules/.bin/htmlhint client
+      run: npx htmlhint client
     - name: Run ESLint
-      run: eslint . --ext .js,.jsx,.ts,.tsx
-      
+      run: npx eslint . --ext .js,.jsx,.ts,.tsx

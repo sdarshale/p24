@@ -82,7 +82,7 @@ app.post("/webhook", async (req, res) => {
   /* capture the order */
   if (event_type === "CHECKOUT.ORDER.APPROVED") {
     try {
-      const { data } = await axios({
+      await axios({
         url: `${PAYPAL_API_BASE}/v2/checkout/orders/${orderId}/capture`,
         method: "post",
         headers: {
