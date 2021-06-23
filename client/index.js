@@ -8,11 +8,7 @@ var order = {
         value: "99.99",
       },
     },
-  ],
-  application_context: {
-    return_url: `${window.location.origin}/success.html`,
-    cancel_url: `${window.location.origin}/cancel.html`,
-  },
+  ]
 };
 
 /* Paypal */
@@ -50,31 +46,7 @@ paypal
 paypal
   .Fields({
     fundingSource: paypal.FUNDING.P24,
-    style: {
-      base: {
-        backgroundColor: "white",
-        color: "black",
-        fontSize: "16px",
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-        lineHeight: "1.4",
-        letterSpacing: "0.3",
-      },
-      input: {
-        backgroundColor: "white",
-        fontSize: "16px",
-        color: "#333",
-        borderColor: "#dbdbdb",
-        borderRadius: "4px",
-        borderWidth: "1px",
-        padding: "1rem",
-      },
-      invalid: {
-        color: "red",
-      },
-      active: {
-        color: "black",
-      },
-    },
+    style: {},
     fields: {
       name: {
         value: "",
@@ -83,7 +55,7 @@ paypal
   })
   .render("#p24-container");
 
-var p24Button = paypal.Buttons({
+paypal.Buttons({
   fundingSource: paypal.FUNDING.P24,
   upgradeLSAT: true,
   style: {
@@ -98,7 +70,6 @@ var p24Button = paypal.Buttons({
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         swal(
           "Order Captured!",
           `Id: ${data.id}, ${Object.keys(data.payment_source)[0]}, ${
@@ -110,7 +81,6 @@ var p24Button = paypal.Buttons({
       .catch(console.error);
   },
   onCancel(data, actions) {
-    console.log(data);
     swal("Order Canceled", `ID: ${data.orderID}`, "warning");
   },
   onError(err) {
@@ -118,11 +88,8 @@ var p24Button = paypal.Buttons({
   },
 });
 
-if (p24Button.isEligible()) {
-  p24Button.render("#p24-btn");
-} else {
-  document.getElementById("p24-radio").style.display = "none";
-}
+
+document.getElementById("paypal-btn").style.display = "none";
 
 /* Radio buttons */
 // Listen for changes to the radio buttons
@@ -149,6 +116,3 @@ document.querySelectorAll("input[name=payment-option]").forEach((el) => {
     }
   });
 });
-
-document.getElementById("p24-container").style.display = "none";
-document.getElementById("p24-btn").style.display = "none";

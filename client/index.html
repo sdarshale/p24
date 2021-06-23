@@ -10,21 +10,24 @@
 
   <body>
 
-    <br />
-
     <label>
       <input
         type="radio"
         name="payment-option"
         value="paypal"
         id="paypal-radio"
-        checked
       />
       <span id="paypal-mark"></span>
     </label>
 
     <label>
-      <input id="p24-radio" value="p24" name="payment-option" type="radio" />
+      <input
+        id="p24-radio"
+        value="p24"
+        name="payment-option"
+        type="radio"
+        checked
+      />
       <span id="p24-mark"></span>
     </label>
 
@@ -35,8 +38,12 @@
 
     <script src="https://www.paypal.com/sdk/js?client-id=AfPbdUbV4LJdK0-0B0QPeUyHnzGgVhIwZfBO3wYRoazaSYRJAIKwwHnfI0EbekJB42FJuVi-3-vgsQvi&components=buttons,fields,marks,funding-eligibility&enable-funding=p24&currency=EUR"></script>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" async></script>
-
     <script src="./index.js"></script>
+
+    <script
+      src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"
+      defer
+    ></script>
+
   </body>
 </html>
