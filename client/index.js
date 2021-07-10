@@ -86,7 +86,8 @@ paypal.Buttons({
   onError(err) {
     console.error(err);
   },
-});
+})
+.render("#p24-btn");
 
 
 document.getElementById("paypal-btn").style.display = "none";
