@@ -44,7 +44,7 @@ paypal
   .render("#p24-mark");
 
 paypal
-  .Fields({
+  .PaymentFields({
     fundingSource: paypal.FUNDING.P24,
     style: {},
     fields: {
