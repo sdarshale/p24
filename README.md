@@ -1,5 +1,8 @@
 # Paying with P24
 
+<img src="https://www.paypalobjects.com/images/checkout/latinum/Altpay_logo_p24.svg" alt="P24 Logo">
+
+
 This integration uses the JavaScript SDK to accept P24 payments
 
 
