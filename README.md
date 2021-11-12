@@ -1,4 +1,4 @@
-# Paying with P24
+# Paying with P24 & Paypal
 
 <img src="https://www.paypalobjects.com/images/checkout/latinum/Altpay_logo_p24.svg" alt="P24 Logo">
 
