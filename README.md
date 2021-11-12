@@ -2,7 +2,7 @@
 
 <p>
 <img src="https://www.paypalobjects.com/images/checkout/latinum/Altpay_logo_p24.svg" alt="P24 Logo">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="100px" style="margin-left: 20px" alt="Blik Logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="90px" alt="Blik Logo">
 </p>
 
 This integration uses the JavaScript SDK to accept P24 payments
