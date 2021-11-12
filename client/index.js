@@ -90,7 +90,8 @@ paypal.Buttons({
 .render("#p24-btn");
 
 
-document.getElementById("paypal-btn").style.display = "none";
+document.getElementById("p24-btn").style.display = "none";
+document.getElementById("p24-container").style.display = "none";
 
 /* Radio buttons */
 // Listen for changes to the radio buttons
