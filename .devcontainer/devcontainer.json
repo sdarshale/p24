@@ -2,7 +2,7 @@
 {
   "name": "P24 Pay",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "image": "hub.docker.com/nallam4u/javascript-node:latest",
   "postCreateCommand": "npm install --ignore-scripts",
   "postAttachCommand": {
     "Start server": "CI=true npx kill-port --yes 8080 && npm start"
@@ -34,10 +34,6 @@
       "documentationUrl": "https://developer.paypal.com/api/rest/requests/"
     }
   },
-  "containerEnv": {
-    "CLIENT_ID": "Aaxw0ZpK_9jPuIbMtDP5-nhpbBtRx3A-4RtJzAa6MmKtA2-uoBIMejkThhCUku7THxm4iTA2bE2FTII4",
-    "CLIENT_SECRET": "ECvqnkqm2ZLuuuaKJPwr48SKYyMC4NHKdC6qptYoe6DM03MmkPmLkA23euqVQ8P4qFFdDU7Ewv2h3XVy"
-  }, 
   "customizations": {
     "vscode": {
       "extensions": [
