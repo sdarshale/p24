@@ -2,7 +2,7 @@
 {
   "name": "P24 Pay",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/",
-  "image": "hub.docker.com/nallam4u/javascript-node:latest",
+  "image": "nallam4u/javascript-node:latest",
   "postCreateCommand": "npm install --ignore-scripts",
   "postAttachCommand": {
     "Start server": "CI=true npx kill-port --yes 8080 && npm start"
