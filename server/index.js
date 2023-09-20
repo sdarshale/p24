@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
 app.post("/api/orders", async (req, res) => {
 
   // use the cart information passed from the front-end to calculate the purchase unit details
+  // eslint-disable-next-line no-unused-vars
   const { cart } = req.body;
 
   const { access_token } = await getAccessToken();
